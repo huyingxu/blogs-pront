@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="author" content="胡应许">
+    <meta name="keywords" content="友情链接">
+    <meta name="description">
+   	<title>友情链接</title>
+    <link href="css/xcode.min.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+ 	<script src="js/av-min.js"></script>
+    <script src="js/Valine.min.js"></script>
+    <link rel="stylesheet" href="css/gitalk.css">
+  	<script src="js/gitalk.min.js"></script>
+</head>
+<body>
+
+<header id="header" class="header bg-white animated headroom--top headroom--not-bottom">
+    <div class="navbar-container">
+        <a class="navbar-logo" target="_self" href="./">
+            <img src="img/blog-logo.png">
+        </a>
+        <div class="navbar-menu">
+            <a href="./" target="_self">首页</a>
+        </div>
+        <div class="navbar-menu">
+            <a href="/archives.html"  target="_self">归档</a>
+        </div>
+        <div class="navbar-menu">
+            <a href="#" target="_self">友链</a>
+        </div>
+        <div class="navbar-search" onclick="">
+            <span class="icon-search"></span>
+            <form role="search" onsubmit="return false;">
+                <span class="search-box">
+                    <input type="text" id="search-inp" class="input" placeholder="搜索..." maxlength="30" autocomplete="off">
+                </span>
+            </form>
+        </div>
+        <div class="navbar-mobile-menu" onclick="">
+            <span class="icon-menu cross"><span class="middle"></span></span>
+            <ul>
+                <li>
+                <a href="" target="_self">首页</a>
+                </li>
+                <li>
+                <a href="" target="_self">归档</a>
+                </li>
+                <li>
+                <a href="" target="_self">友链</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+
+
+<article class="main-content page-page">
+    <div id="post-content" class="post-content">
+        <h3>友情链接</h3>
+        <ul class="flinks">
+            
+        </ul>
+        <h3>链接须知</h3>
+        <blockquote>
+            <ul>
+                <li><p>请确定贵站可以稳定运营</p></li>
+                <li><p>原创博客优先，技术类博客优先，设计、视觉类博客优先</p></li>
+                <li><p>经常过来访问和评论，眼熟的</p></li>
+            </ul>
+        </blockquote>
+        <h3>基本信息</h3>
+        <pre><code class="lang-md hljs markdown">
+<span class="hljs-code">            网站名称：</span><span><span class="hljs-code">胡应许</span></span>
+<span class="hljs-code">            网站地址：</span><span><span class="hljs-code">大萨达</span></span></code></pre>
+        <p>我的邮箱:<span>1834201697@qq .com</span></p>
+        <p>暂时先这样，同时欢迎互换友链 ^_^</p>
+        <p>还有，我会不定时对无法访问的网址进行清理，请保证自己的链接长期有效</p></div>
+</article>
+
+
+<script type="text/javascript">
+    $(function(){
+    	//获取拦截器传来的设置项
+        /*<![CDATA[*/
+    	var options={"blog_start":"2020-04-05","blog_url":"\u5927\u8428\u8FBE","email_username":"1834201697@qq .com","attachment_location":"server","is_install":"true","blog_name":"\u80E1\u5E94\u8BB8"};
+        /*]]>*/
+        if(options.platform_comment=="gitalk"){
+        	$(".post-content").append("<div id='gitalk-container'></div>");
+        	var gitalk = new Gitalk({
+        		  clientID: options.comment_gitalk_clientid,
+        		  clientSecret: options.comment_gitalk_clientSecret,
+        		  repo: options.comment_gitalk_repo,
+        		  owner: options.comment_gitalk_owner,
+        		  admin: [options.comment_gitalk_admin],
+        		  id: location.pathname,      // Ensure uniqueness and length less than 50
+        		  distractionFreeMode: false  // Facebook-like distraction free mode
+        		})
+        	gitalk.render('gitalk-container')
+        }else if(options.platform_comment=="valine"){
+        	$(".post-content").append("<div id='vcomments'></div>");
+        	new Valine({
+                el: '#vcomments',
+                appId: options.comment_valine_appid,
+                appKey: options.comment_valine_appkey,
+                notify:false, 
+                verify:false, 
+                placeholder: options.comment_valine_hint,
+                avatar: options.comment_valine_portrait,
+                //visitor: true
+            })
+        }
+    });
+    </script>
+ 
+
+
+ <footer class="footer bg-white">
+    <div class="footer-social">
+        <div class="footer-container clearfix">
+            <div class="social-list">
+            
+            	
+            
+            	
+            
+            	
+            
+            	
+            
+            </div>
+        </div>
+    </div>
+      <div class="footer-meta">
+        <div class="footer-container">
+            <div class="meta-item meta-copyright">
+                <div class="meta-copyright-info" style="text-align: center;">
+                    <div class="info-text">
+                    <p>Powered by <a href="" target="_blank" rel="nofollow">huyingxu</a></p>
+                    <p>© 2020 <a href="">胡应许</a></p>    
+                    <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+</footer>
+ 
+<script src="js/headroom.min.js"></script>
+<script src="js/highlight.min.js"></script>
+<script src="js/instantclick.min.js"></script>
+<script>
+    /*<![CDATA[*/
+    var isOk = null;
+    if (isOk=='post') {
+        var postDirectory = new Headroom(document.getElementById("directory-content"), {
+            tolerance: 0,
+            offset: 100,
+            classes: {
+                initial: "initial",
+                pinned: "pinned",
+                unpinned: "unpinned"
+            }
+        });
+        postDirectory.init();
+    }
+    var header = new Headroom(document.getElementById("header"), {
+        tolerance: 10,
+        offset: 80,
+        classes: {
+            initial: "animated",
+            pinned: "slideDown",
+            unpinned: "slideUp"
+        }
+    });
+    	header.init();
+    $('#search-inp').keypress(function (e) {
+        var key = e.which; //e.which是按键的值
+        if (key == 13) {
+            var q = $(this).val();
+            if (q && q != '') {
+                window.location.href = '/search/' + q;
+            }
+        }
+    });
+    /*]]>*/
+</script>
+
+<script data-no-instant="">
+    /*<![CDATA[*/
+    InstantClick.on('change', function (isInitialLoad) {
+        var blocks = document.querySelectorAll('pre code');
+        for (var i = 0; i < blocks.length; i++) {
+            hljs.highlightBlock(blocks[i]);
+        }
+        if (isInitialLoad === false) {
+            if (typeof ga !== 'undefined') ga('send', 'pageview', location.pathname + location.search);
+        }
+    });
+    InstantClick.init('mousedown');
+    /*]]>*/
+</script>
+<div style="display: none;"></div>
+
+
+</body></html>

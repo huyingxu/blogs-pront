@@ -1,0 +1,152 @@
+
+#model{
+    width:500px;
+    height:200px;
+    margin-left:-250px;
+    margin-top:-370px;
+    background-color: #e4e4e4;
+    position:fixed;
+    top:50%;
+    left:50%;
+    z-index: 200;
+}
+#outer{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:10000;
+    padding-top:10%;
+    text-align:center;
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-color:#000;
+    background-color:rgba(0,0,0,0.7);
+    filter:alpha(opacity=50);
+}
+
+#modal{
+    background-color: #dcd9d9;
+    border-radius: 5px;
+}
+
+#close{
+    margin-right: 5px;
+    padding: 5px;
+}
+
+#modalTitle{
+    float: left;
+    padding: 7px;
+    font-size: 14px;
+    color: #3a3a3a;
+}
+
+#back{
+    width: 200px;/*设置按钮宽度*/
+    height: 30px;/*设置按钮高度*/
+    color:white;/*字体颜色*/
+    background-color:cornflowerblue;/*按钮背景颜色*/
+    border-radius: 3px;/*让按钮变得圆滑一点*/
+    border-width: 0;/*消去按钮丑的边框*/
+    margin: 0;
+    outline: none;/*取消轮廓*/
+    font-family: KaiTi;/*字体设置为楷体*/
+    font-size: 17px;/*设置字体大小*/
+    text-align: center;/*字体居中*/
+    cursor: pointer;/*设置鼠标箭头手势*/
+    margin-left: 10px;
+}
+
+#back:hover{/*鼠标移动时的颜色变化*/
+    background-color: #929292;
+}
+
+#home{
+    width: 200px;/*设置按钮宽度*/
+    height: 30px;/*设置按钮高度*/
+    color:white;/*字体颜色*/
+    background-color: #4cae51;/*按钮背景颜色*/
+    border-radius: 3px;/*让按钮变得圆滑一点*/
+    border-width: 0;/*消去按钮丑的边框*/
+    margin: 0;
+    outline: none;/*取消轮廓*/
+    font-family: KaiTi;/*字体设置为楷体*/
+    font-size: 17px;/*设置字体大小*/
+    text-align: center;/*字体居中*/
+    cursor: pointer;/*设置鼠标箭头手势*/
+    margin-left: 10px;
+}
+
+#home:hover{/*鼠标移动时的颜色变化*/
+    background-color: #929292;
+}
+.model_popup {
+    width: 452px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    text-align: center;
+    padding-bottom: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -226px;
+    margin-top: -140px;
+    overflow: hidden;
+}
+.model_popup .popup-ts {
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    font-size: 16px;
+    color: #333333;
+    font-size: 16px;
+    color: #333333;
+}
+.model_toast {
+    background: rgba(0,0,0,.5);
+    border-radius: 4px;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -120px;
+    margin-left: -70px;
+}
+.model_toast .popup-toast {
+    padding: 9px 40px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+}
+.model_popup .popup-text {
+    padding: 25px 40px 35px;
+    text-align: center;
+    font-size: 16px;
+    color: #333333;
+    /* border-bottom: 1px solid #f2f2f2; */
+    border-top: 1px solid #99bafa;
+}
+
+#tips {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    padding-top: 10%;
+    color: #fff9f9;
+    text-align: center;
+}
+
+#tipsModel{
+    width: 300px;
+    height: 100px;
+    margin-left: -160px;
+    /*margin-top: -200px;*/
+    background: rgba(0,0,0,.5);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 200;
+}

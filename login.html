@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页面</title>
+    <link href="css/lrtk.css" rel="stylesheet"/>
+    <link rel="stylesheet" th:href="@{/layui/css/layui.css}">
+    <link href="/layui/css/modules/layer/default/layui.css">
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+<div id="login">
+    <div class="wrapper">
+        <div class="login">
+            <form id="form" name="formEdit" action="javascript:submit()" class="layui-form container offset1 loginform">
+                <div id="owl-login">
+                    <div class="hand"></div>
+                    <div class="hand hand-r"></div>
+                    <div class="arms">
+                        <div class="arm"></div>
+                        <div class="arm arm-r"></div>
+                    </div>
+                </div>
+                <div class="pad">
+                    <!--<input type="hidden" name="_csrf" value="9IAtUxV2CatyxHiK2LxzOsT6wtBE6h8BpzOmk=">-->
+                    <a style="float: right;color: cornflowerblue;padding: 5px;" id="txt1" href="javascript:void(0)" onclick="switchSms()">短信登录</a>
+                    <a style="float: right;color: cornflowerblue;padding: 5px;display:none" id="txt2" href="javascript:void(0)" onclick="switchUser()">账号密码登录</a><div style="clear:both;"></div>
+                    <div  id="userLogin">
+                        <div class="control-group">
+                            <div class="controls">
+                                <label for="t_user" class="fa fa-user"></label>
+                                <input type="text" id="t_user" name="t_user" tabindex="1" placeholder="用户名、手机号"  onBlur="reg_user()" class="form-control input-medium reg_user" style="width: 95%;" >
+                                <span class="user_hint"></span>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <div class="controls">
+                                <label for="t_pwd" class="control-label fa fa-asterisk"></label>
+                                <input type="password" id="t_pwd" name="password" tabindex="2"  placeholder="请输入4-16位密码" onBlur="reg_password()" class="form-control input-medium reg_password" style="width: 95%;">
+                                <span class="password_hint"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="smsLogin">
+                        <!--                        <div class="control-group">-->
+                        <!--                            <div class="controls">-->
+                        <!--                                <label for="tel" class="control-label fa fa-user"></label>-->
+                        <!--                                <input id="tel" name="tel" placeholder="手机号" tabindex="3" class="reg_mobile form-control input-medium" style="width: 95%;">-->
+                        <!--                                <span class="mobile_hint"></span>-->
+                        <!--                            </div>-->
+                        <!--                        </div>-->
+                        <!--                        <div class="control-group">-->
+                        <!--                            <div class="controls">-->
+                        <!--                                <label for="t_code" class="control-label fa fa-asterisk"></label>-->
+                        <!--                                <input id="t_code" type="text" name="t_code" placeholder="验证码" tabindex="4" class="reg_code form-control input-medium" style="width: 64%;">&ensp;-->
+                        <!--                                <input type="button" id="code" class="btn btn-primary"style="padding: 2.5%;width: 28.8%;background-color: #D4F2FC;border-color: #8FBBF7;" onclick="settime(this)" value="获取验证码"/>-->
+                        <!--                                <span class="code_hint"></span>-->
+                        <!--                            </div>-->
+                        <!--                        </div>-->
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <a class="btn pull-left btn-link" style="font-size: 6px;margin-left: -28px;margin-top: 5px;color: #717171;">其他登录方式:</a>
+                    <a class="layui-icon layui-icon-login-qq btn pull-left btn-link" tabindex="5" style="font-size: 20px;margin-left: -13px; color: #717171;"></a>
+                    <a class="layui-icon layui-icon-login-wechat btn pull-left btn-link" tabindex="5" style="font-size: 20px;margin-left: -13px; color: #717171;"></a>
+                    <!--                    <a href="https://www.slera.cn" tabindex="5"-->
+                    <!--                       class="btn pull-left btn-link">小胡子呀</a>-->
+                    <input type="hidden" id="type" name="type" value="1" >
+                    <button id="submitBtn" type="button" name="button" tabindex="4" onclick="submit()" class="red_button btn btn-primary">登录</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="/js/jquery/jquery-3.2.1.min.js"></script>
+<script src="/layer/layer.js"></script>
+<script src="/js/admin/md5.js"></script>
+<script src="/js/admin/login.js"></script>
+<script>
+    $(function () {
+        $('#login #t_pwd').focus(function () {
+            $('#owl-login').addClass('password');
+        }).blur(function () {
+            $('#owl-login').removeClass('password');
+        });
+    });
+</script>
+</body>
+</html>

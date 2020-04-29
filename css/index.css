@@ -1,0 +1,9 @@
+.traffic:before {
+    content:"";
+    margin-left: 10px;
+    display: inline-block;
+    height: 14px;
+    width: 17px;
+    background: url(/images/xianshi.png)no-repeat;
+    /* background-image: url(/images/xianshi.png);*/
+}
