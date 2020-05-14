@@ -39,7 +39,10 @@ window.onload = function() {
                 $("#content").html(json.content);
                 $("#traffic").html(" "+json.traffic);
                 // 标签
-                $("#category").html('<a href="" >'+json.categoryName+'</a>');
+                $.each(json.categoryInfo, function(i, item) {
+                    $("#category").append('<a href="" >'+item.name+'</a>');
+                });
+                // $("#category").html('<a href="" >'+json.categoryInfo.name+'</a>');
                 $("#layui-layer-shade1").remove();
                 $("#layui-layer1").remove();
             }
